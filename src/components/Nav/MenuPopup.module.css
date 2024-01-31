@@ -1,0 +1,188 @@
+.container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eceeef;
+  width: 520px;
+  height: 100%;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+.xIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: fit-content;
+  border-bottom: 2px solid #ffffff;
+}
+
+.menuFooter {
+  height: fit-content;
+  width: 100%;
+}
+
+.pages h1 {
+  color: black;
+  font-size: 18px;
+  font-weight: 100;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+
+.pages h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #ffaa17;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(0);
+}
+
+.pages h1:hover::after {
+  transform: scale(1);
+}
+
+.btnBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.btnBox button {
+  background-color: #ffaa17;
+  border: none;
+  border-radius: 5px;
+  height: 60px;
+  width: 100%;
+  color: black;
+  padding: 0px 25px;
+  font-weight: 100;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.btnBox button:hover {
+  transform: scale(0.9);
+}
+
+.menuFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.menuFooter h2 {
+  color: #a1a8ad;
+  font-weight: 100;
+  text-align: center;
+}
+
+.emailNumberBox p {
+  color: black;
+
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+
+.emailNumberBox p::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #ffaa17;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(0);
+}
+
+.emailNumberBox p:hover::after {
+  transform: scale(1);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contactIcon {
+  color: #ffaa17;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c9cacd;
+  border-radius: 100px;
+  width: fit-content;
+  padding: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.iconCircle:hover {
+  background-color: #ffaa17;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  .popup {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .popup {
+    width: 100vw;
+  }
+}

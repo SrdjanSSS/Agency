@@ -1,0 +1,118 @@
+.container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  height: 110px;
+  padding: 0 5%;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+  border-bottom: 0.5px solid #7f8184;
+  transition: height 0.5s;
+}
+
+.containerScrolling {
+  background-color: rgb(18, 18, 18);
+  border: none;
+}
+
+.container h4 {
+  position: relative;
+  font-weight: 100;
+  width: max-content;
+  cursor: pointer;
+}
+
+.container h4::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #ffaa17;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+}
+
+.container h4:hover::after {
+  transform: scaleX(1);
+}
+
+.logo {
+  min-width: 100px;
+  height: 60%;
+  cursor: pointer;
+}
+
+.navBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 700px;
+  height: 100%;
+}
+
+.navBox button {
+  background-color: #ffaa17;
+  border: none;
+  border-radius: 5px;
+  height: 50%;
+  color: white;
+  padding: 0px 25px;
+  font-weight: 100;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.navBox button:hover {
+  transform: scale(0.9);
+}
+
+.icon {
+  display: none;
+  width: 35px;
+  height: 35px;
+  color: #ffaa17;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: scale(0.9);
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    height: 80px;
+  }
+
+  .logo {
+    min-width: 80px;
+    height: 60%;
+    cursor: pointer;
+  }
+
+  .navBox {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding-right: 40px;
+  }
+
+  .icon {
+    height: 25px;
+    width: 25px;
+  }
+}

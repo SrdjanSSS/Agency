@@ -1,0 +1,324 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+}
+
+.bgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: grayscale(100%);
+  z-index: -1;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: max-content;
+}
+
+.container p {
+  margin: 0;
+  font-weight: 100;
+  font-size: 18px;
+  color: #686a6f;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 20%;
+  height: 50%;
+  background-color: #181818;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 0 10px;
+}
+
+.logo {
+  width: 120px;
+  height: 70px;
+  margin-top: 20px;
+}
+
+.logoBox:hover {
+  animation: glowAnimation 1s infinite alternate;
+}
+
+.linkBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #181818;
+  width: 20%;
+
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.linkBox:hover {
+  animation: glowAnimation 1s infinite alternate;
+}
+
+.linkBox h1 {
+  color: #ffaa17;
+  font-weight: 100;
+}
+
+.linkWordBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.linkWordBox p {
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+
+.linkWordBox p::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #ffaa17;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(0);
+}
+
+.linkWordBox p:hover::after {
+  transform: scale(1);
+}
+
+.servicesBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #181818;
+  width: 20%;
+
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.servicesBox:hover {
+  animation: glowAnimation 1s infinite alternate;
+}
+
+.servicesBox h1 {
+  color: #ffaa17;
+  font-weight: 100;
+}
+
+.servicesWordBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.servicesWordBox p {
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+
+.servicesWordBox p::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #ffaa17;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(0);
+}
+
+.servicesWordBox p:hover::after {
+  transform: scale(1);
+}
+
+.contactBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #181818;
+  width: 20%;
+
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contactBox:hover {
+  animation: glowAnimation 1s infinite alternate;
+}
+
+@keyframes glowAnimation {
+  from {
+    box-shadow: 0 0 10px #ffaa17;
+  }
+  to {
+    box-shadow: 0 0 20px #ffaa17;
+  }
+}
+
+.contactBox h1 {
+  color: #ffaa17;
+  font-weight: 100;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact p {
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+
+.contact p::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #ffaa17;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(0);
+}
+
+.contact p:hover::after {
+  transform: scale(1);
+}
+
+.icon {
+  color: #ffaa17;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1e22;
+  border-radius: 100px;
+  width: fit-content;
+  padding: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.iconCircle:hover {
+  background-color: #ffaa17;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1280px) {
+  .contentBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    height: fit-content;
+    padding: 10% 0;
+  }
+
+  .contentBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .logoBox {
+    width: 50%;
+  }
+
+  .linkBox {
+    width: 50%;
+  }
+
+  .servicesBox {
+    width: 50%;
+  }
+
+  .contactBox {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container p {
+    margin: 0;
+    font-weight: 100;
+    font-size: 14px;
+    color: #686a6f;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  .logoBox {
+    width: 70%;
+  }
+
+  .linkBox {
+    width: 70%;
+  }
+
+  .servicesBox {
+    width: 70%;
+  }
+
+  .contactBox {
+    width: 70%;
+  }
+}
